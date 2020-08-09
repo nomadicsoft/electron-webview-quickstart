@@ -1,0 +1,46 @@
+{
+  "name": "nomadic-soft",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder build --win"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "Nomadic Soft",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "build": {
+    "directories": {
+      "buildResources": "resources"
+    },
+    "productName": "Nomadic Soft",
+    "nsis": {
+      "artifactName": "Nomadic.Soft.setup.${version}.${ext}",
+      "uninstallDisplayName": "Nomadic Soft"
+    },
+    "win": {
+      "publish": [],
+      "target": [
+        "nsis",
+        "msi"
+      ]
+    }
+  },
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^9.1.2",
+    "electron-builder": "^22.8.0",
+    "electron-packager": "^15.0.0"
+  },
+  "dependencies": {
+    "custom-electron-titlebar": "^3.2.3"
+  }
+}
